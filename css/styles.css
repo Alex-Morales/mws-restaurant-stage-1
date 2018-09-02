@@ -109,6 +109,7 @@ nav h1 a {
   height: 50px;
   background-color: #3397DB;
   align-items: center;
+	padding: 10px 0;
 }
 .filter-options h2 {
   color: white;
@@ -205,7 +206,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -241,6 +242,7 @@ nav h1 a {
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
   width: 50%;
+	align-content: flex-start;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -276,21 +278,47 @@ nav h1 a {
 
 
 @media screen and (max-width: 550px) {
-	nav, #map, #footer, #restaurants-list, #maincontent, #map-container{
+	nav h1 a {
+		letter-spacing: 5px;
+	}
+	nav, #map, #map-container{
 		display: flex;
-		flex-wrap: wrap;
+		/* flex-wrap: wrap; */
 		width:100%;
 		margin:auto;
 		justify-content: center;
 }
-	.filter-options {
-		display: inline-flex;
-		width: 100%;
-		justify-content: center;
-	}
 	#neighborhoods-select, #cuisines-select {
 		width: 50%;
 		justify-content: center;
+	}
+	.filter-options {
+	  width: 100%;
+	  height: 100%;
+	  background-color: #3397DB;
+	  align-items: center;
+		padding: 10px 0;
+	/*
+		display: inline-flex;
+		width: 100%;
+		justify-content: center;
+	*/
+	}
+	.filter-options h2{
+		text-align: center;
+	}
+	div .filter-options {
+		width: 100%;
+	}
+	#restaurants-list {
+	  background-color: #f3f3f3;
+	  list-style: outside none none;
+	  margin: 0;
+	  padding: 30px 15px 60px;
+	  text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 }
 
@@ -304,12 +332,34 @@ nav h1 a {
 }
 }
 @media screen and (min-width: 800px){
-	nav, #map, #footer, #maincontent, #map-container, .filter-options, #restaurants-list{
-		width: 800px;
+	nav, #map, #footer, #maincontent, #map-container, .filter-options {
+		/* width: 800px; */
 		display: flex;
 		flex-wrap: wrap;
 		width:100%;
 		margin:auto;
 		justify-content: center;
 }
+	#restaurants-list {
+		background-color: #f3f3f3;
+	  list-style: outside none none;
+	  margin: 0;
+	  padding: 30px 15px 60px;
+	  text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		width:100%;
+		/* justify-content: center; */
+	}
+	ul #restaurants-list {
+		width: 100%;
+		margin: auto;
+		padding: 30px 15px 60px;
+		justify-content: center;
+		text-align: center;
+	}
+	#breadcrumb {
+		width: 100%;
+	}
 }
