@@ -20,15 +20,15 @@ ul, li {
 	font-size: 10pt;
 	color: #333;
 }
-a {
+button {
 	color: orange;
 	text-decoration: none;
 }
-a:hover, a:focus {
+button:hover, button:focus {
 	color: #3397db;
 	text-decoration: none;
 }
-a img{
+button img{
 	border: none 0px #fff;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -171,8 +171,9 @@ nav h1 a {
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
+  /* min-height: 248px; */
   min-width: 100%;
+	overflow: hidden;
 }
 #restaurants-list li h1 {
   color: #f18200;
@@ -224,7 +225,6 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -258,8 +258,9 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+  /* padding: 140px 40px 30px; */
   width: 50%;
+	text-align: left;
 	align-content: flex-start;
 }
 #reviews-container {
@@ -344,7 +345,7 @@ nav h1 a {
 }
 }
 @media screen and (min-width: 800px){
-	#map, #map-container, .filter-options {
+	.filter-options {
 		display: flex;
 		flex-wrap: wrap;
 		width:100%;
@@ -358,14 +359,11 @@ nav h1 a {
 		justify-content: center;
 		text-align: center;
 	}
-	#breadcrumb {
-		width: 100%;
-	}
-	#restaurant-container, #reviews-container {
+	/* #restaurant-container, #reviews-container {
 		display: flex;
 		flex-direction: column;
 		align-items: left;
 		text-align: left;
 		width: 50%;
-	}
+	} */
 }
