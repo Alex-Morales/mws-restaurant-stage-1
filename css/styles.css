@@ -52,7 +52,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
-	
+
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -176,7 +176,7 @@ nav h1 a {
   min-width: 100%;
 	overflow: hidden;
 }
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #f18200;
   font-family: Arial,sans-serif;
   font-size: 14pt;
