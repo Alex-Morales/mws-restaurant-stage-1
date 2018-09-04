@@ -1,4 +1,4 @@
-var cacheID = "mws-restaurant-10";
+var cacheID = "mws-restaurant-01";
 
 const cacheFiles = [
   "/",
@@ -53,6 +53,22 @@ self.addEventListener('fetch', event => {
           console.log(error);
         });
       }
+    })
+  );
+});
+
+self.addEventListener('activate', event => {
+  console.log('Activating new service worker...');
+  const cacheWhitelist = cacheID;
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if(cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
     })
   );
 });
